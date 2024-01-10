@@ -12,7 +12,6 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET yolo8-cls PROPERTY CXX_STANDARD 20)
 endif()
 
-include_directories(${OpenCV_INCLUDE_DIRS})
 find_package(OpenCV REQUIRED)
 
 target_link_libraries(yolo8-cls ${OpenCV_LIBS})
