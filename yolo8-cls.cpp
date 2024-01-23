@@ -14,8 +14,6 @@ void infer(string model_path, string img_path) {
 	resize(input, dst, Size(imgw, imgh), 0, 0, INTER_LINEAR);
 	dnn::blobFromImage(dst, input, 1 / 255.0f, Size(dst.cols, dst.rows), Scalar(0, 0, 0), true, false);
 
-	model.setPreferableBackend(dnn::DNN_BACKEND_CUDA);
-	model.setPreferableTarget(dnn::DNN_TARGET_CUDA);
 	model.setInput(input);
 	results = model.forward();
 
