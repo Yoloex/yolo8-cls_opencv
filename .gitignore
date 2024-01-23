@@ -1,6 +1,7 @@
 .vs/
 out/
 build/
+*.onnx
 
 CMakePresets.json
 CMakeSettings.json
